@@ -9,15 +9,15 @@ const Card = ({ image, heading, description }) => {
 
   return (
     <div
-      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
-      style={{ height: "400px" }}
+      className=" w-450px h-800px p-4 bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
+      //   style={{ height: "500px", width: "500px" }}
     >
       <img
-        className="w-full h-1/2 object-cover rounded-t-lg"
+        className="w-full h-3/5 object-cover rounded-t-lg"
         src={image}
         alt="Card"
       />
-      <div className="p-5 h-1/2 flex flex-col justify-between">
+      <div className="p-5 h-2/5 flex flex-col justify-between">
         <h2 className="text-2xl font-bold mb-2">{heading}</h2>
         <div
           className={`overflow-hidden ${expanded ? "block" : "hidden"} mb-2`}
