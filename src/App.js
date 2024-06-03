@@ -52,7 +52,7 @@ const App = () => {
       </section>
       <section classname="main mx-20">
         {/* <div className="flex items-center justify-center p-5 border-t border-b border-black"> */}
-        <div className="flex items-center justify-between px-10 mx-20 py-10  flex-wrap">
+        <div className="main flex flex-wrap justify-center gap-6 px-10 py-10">
           {cardsData.map((card, index) => (
             <Card
               className="my-10"

@@ -9,28 +9,24 @@ const Card = ({ image, heading, description }) => {
 
   return (
     <div
-      className="max-w-sm bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 bg-white border border-gray-200 rounded-lg shadow overflow-hidden"
       style={{ height: "400px" }}
     >
       <img
-        className="rounded-t-lg"
+        className="w-full h-1/2 object-cover rounded-t-lg"
         src={image}
-        alt=""
-        style={{ height: "50%" }}
+        alt="Card"
       />
-      <div className="p-5" style={{ height: "50%" }}>
-        <h2 className="mb-2 text-2xl font-bold tracking-tight dark:text-black">
-          {heading}
-        </h2>
+      <div className="p-5 h-1/2 flex flex-col justify-between">
+        <h2 className="text-2xl font-bold mb-2">{heading}</h2>
         <div
-          className={`card-description overflow-hidden ${expanded ? "block" : "hidden"} mb-3 font-normal text-black dark:text-gray-400`}
-          style={{ height: "calc(100% - 56px)" }}
+          className={`overflow-hidden ${expanded ? "block" : "hidden"} mb-2`}
         >
-          {description}
+          <p className="text-black">{description}</p>
         </div>
         <button
-          onClick={handleClick}
           className="text-sm font-medium text-center text-white bg-blue-700 rounded-lg px-3 py-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          onClick={handleClick}
         >
           {expanded ? "Hide Description" : "Show Description"}
         </button>
