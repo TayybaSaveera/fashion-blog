@@ -9,6 +9,10 @@ module.exports = {
       width: {
         "450px": "450px",
       },
+      padding: {
+        "80px":
+          "80px" /* Adjust this value based on the actual height of your navbar */,
+      },
     },
   },
   plugins: [],
