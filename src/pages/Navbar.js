@@ -31,12 +31,12 @@
 // export default Navbar;
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { IconSearch } from "@tabler/icons-react";
 const Navbar = () => {
   return (
     <nav className="fixed h-24 top-0 left-0 right-0 z-50 header flex items-center justify-evenly bg-gray-100 border-b border-black">
       <div className="container mx-auto flex justify-between items-center border-r border-black">
-        <h1 className="name p-6 text-3xl block w-2/5 font-semibold text-end border-r border-black">
+        <h1 className="name p-6 text-2xl block w-2/5 font-semibold text-end border-r border-black">
           <Link to={"/"}>FASHION BLOG</Link>
         </h1>
         <h1 className="blog p-6 text-2xl block w-1/4 border-r text-center border-black">
@@ -46,9 +46,10 @@ const Navbar = () => {
           ABOUT{" "}
         </h1>
         <h1 className="contact p-6 text-2xl block w-1/4 border-r text-center border-black">
-          CONTACT
+          <Link to={"/contact"}> CONTACT</Link>
         </h1>
-        <div className="search-container p-6">
+        <div className="search-container p-6 flex flex-row">
+          <IconSearch stroke={1} />
           <input
             type="text"
             placeholder="Search..."
