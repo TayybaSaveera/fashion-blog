@@ -7,6 +7,7 @@ import girlimage from "../images/girl.jpg";
 import dress from "../images/dress.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import BlogDetail from "./BlogDetail";
 
 const Home = () => {
   const cardsData = [
@@ -42,7 +43,7 @@ const Home = () => {
       <Navbar />
 
       <div className="pt-24">
-        <section className="name flex items-center justify-center  border-t border-b border-black h-24">
+        <section className="name flex items-center justify-center  border-b border-black h-32">
           <h1 className="text-6xl font-semibold">THE BLOG</h1>
         </section>
       </div>
@@ -50,13 +51,16 @@ const Home = () => {
       <section className="main mx-10">
         <div className="main flex flex-wrap justify-center gap-6 px-10 py-10">
           {cardsData.map((card, index) => (
-            <Card
-              key={index}
-              id={card.id}
-              image={card.image}
-              heading={card.heading}
-              description={card.description}
-            />
+            <Link key={index} to={`/blog-detail/${card.id}`}>
+              <Card
+                key={index}
+                id={card.id}
+                image={card.image}
+                heading={card.heading}
+                description={card.description}
+                onclick={onclick}
+              />
+            </Link>
           ))}
         </div>
       </section>
